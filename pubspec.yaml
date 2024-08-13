@@ -40,6 +40,7 @@ dependencies:
   cached_network_image:
   flutter_svg:
   lottie:
+  smooth_page_indicator:
 # Data Storage
   shared_preferences:
 # Device preview
@@ -56,10 +57,17 @@ flutter:
     - assets/lotties/
     - assets/translations/
 
-  # fonts:
-  #   - family: ProximaSoft
-  #     fonts:
-  #       - asset: assets/fonts/ProximaSoft-Bold.ttf
-  #       - asset: assets/fonts/ProximaSoft-semiBold.ttf
-  #       - asset: assets/fonts/ProximaSoft-Medium.ttf
-  #       - asset: assets/fonts/ProximaSoft-Regular.ttf
+
+
+  fonts:
+    - family: lexend
+      fonts:
+        - asset: assets/fonts/lexend/lexend-Black.ttf
+        - asset: assets/fonts/lexend/lexend-Bold.ttf
+        - asset: assets/fonts/lexend/lexend-ExtraBold.ttf
+        - asset: assets/fonts/lexend/lexend-ExtraLight.ttf
+        - asset: assets/fonts/lexend/lexend-Light.ttf
+        - asset: assets/fonts/lexend/lexend-Medium.ttf
+        - asset: assets/fonts/lexend/lexend-Regular.ttf
+        - asset: assets/fonts/lexend/lexend-SemiBold.ttf
+        - asset: assets/fonts/lexend/lexend-Thin.ttf
