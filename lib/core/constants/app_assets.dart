@@ -9,6 +9,11 @@ class AssetsPaths {
 class AppImages {
   static const String logo = '${AssetsPaths.images}/logo.png';
   static const String arrow = '${AssetsPaths.images}/arrow.png';
+  static const String learn = '${AssetsPaths.images}/learn.png';
+  static const String profile = '${AssetsPaths.images}/profile.png';
+  static const String search = '${AssetsPaths.images}/search.png';
+  static const String achievement = '${AssetsPaths.images}/achievement.png';
+  static const String home = '${AssetsPaths.images}/home.png';
 }
 
 class AppIcons {}
