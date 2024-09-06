@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'font_weight_helper.dart';
 
-class AppTextStyles{
+class AppTextStyles {
   static const String fontFamily = 'lexend';
 
   static TextStyle font24Bold = TextStyle(
@@ -12,7 +12,38 @@ class AppTextStyles{
     fontWeight: FontWeightHelper.bold,
     color: AppColors.white,
     //fontFamily: fontFamily,
-  );  static TextStyle font16Regular = TextStyle(
+  );
+  static TextStyle font22Medium = TextStyle(
+    fontSize: 22.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.white,
+    //fontFamily: fontFamily,
+  );
+  static TextStyle font12Medium = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.white,
+    //fontFamily: fontFamily,
+  );
+  static TextStyle font20Medium = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.white,
+    //fontFamily: fontFamily,
+  );
+  static TextStyle font10Regular = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.white,
+    //fontFamily: fontFamily,
+  );
+  static TextStyle font14Regular = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.white,
+    //fontFamily: fontFamily,
+  );
+  static TextStyle font16Regular = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.regular,
     color: AppColors.white,
