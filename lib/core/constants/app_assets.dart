@@ -14,6 +14,10 @@ class AppImages {
   static const String search = '${AssetsPaths.images}/search.png';
   static const String achievement = '${AssetsPaths.images}/achievement.png';
   static const String home = '${AssetsPaths.images}/home.png';
+  static const String bookBookmark = '${AssetsPaths.images}/book_bookmark.png';
+  static const String fire = '${AssetsPaths.images}/fire.png';
+  static const String handshake = '${AssetsPaths.images}/handshake.png';
+  static const String learnPage = '${AssetsPaths.images}/learn_page.png';
 }
 
 class AppIcons {}
