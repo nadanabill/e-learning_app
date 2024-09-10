@@ -13,6 +13,7 @@ ThemeData appTheme() => ThemeData(
           statusBarColor: Colors.transparent,
         ),
       ),
+      scaffoldBackgroundColor: AppColors.white,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         type: BottomNavigationBarType.fixed,
         selectedLabelStyle: TextStyle(

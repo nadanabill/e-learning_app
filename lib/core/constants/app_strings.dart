@@ -9,4 +9,5 @@ class AppStrings {
   static const String whatLocalLanguage =
       'What local language would you like to learn?';
   static const String languageBeingLearned = 'Language Being Learned';
+  static const String learnNow = 'Learn Now';
 }

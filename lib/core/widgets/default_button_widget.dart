@@ -15,6 +15,7 @@ class DefaultButtonWidget extends StatelessWidget {
   final Color? borderColor;
   final double? borderRadius;
   final double? borderWidth;
+  final double? elevation;
 
   const DefaultButtonWidget({
     super.key,
@@ -28,6 +29,7 @@ class DefaultButtonWidget extends StatelessWidget {
     this.borderColor,
     this.borderRadius,
     this.borderWidth,
+    this.elevation,
   });
 
   @override
@@ -37,6 +39,7 @@ class DefaultButtonWidget extends StatelessWidget {
       width: width ?? double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          elevation: elevation,
           backgroundColor: color ?? AppColors.primary60,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 40.r),
