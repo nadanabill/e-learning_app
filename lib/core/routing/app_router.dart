@@ -14,6 +14,11 @@ class AppRouter {
       case Routes.learn:
         return MaterialPageRoute(builder: (_) => const LearnScreen());
 
+      case Routes.test:
+        return MaterialPageRoute(
+          builder: (_) => TestScreen(
+          ),
+        );
       default:
         return null;
     }
