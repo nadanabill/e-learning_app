@@ -18,6 +18,8 @@ class AppImages {
   static const String fire = '${AssetsPaths.images}/fire.png';
   static const String handshake = '${AssetsPaths.images}/handshake.png';
   static const String learnPage = '${AssetsPaths.images}/learn_page.png';
+  static const String testPageSuccess =
+      '${AssetsPaths.images}/test_page_success.png';
 }
 
 class AppIcons {}
