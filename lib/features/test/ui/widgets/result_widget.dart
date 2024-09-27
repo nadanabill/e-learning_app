@@ -28,7 +28,7 @@ class ResultWidget extends StatelessWidget {
           Text(
             correct ? 'Amazing!!' : 'Ups.. that’s wrong',
             style: AppTextStyles.font20Medium
-                .copyWith(color: AppColors.success100),
+                .copyWith(color: correct? AppColors.success100 : AppColors.error100),
           ),
           verticalSpace(2),
           Row(
@@ -51,7 +51,7 @@ class ResultWidget extends StatelessWidget {
           DefaultButtonWidget(
             text: 'Next Question',
             onPressed: () {},
-            color: AppColors.success100,
+            color:correct? AppColors.success100 : AppColors.error100,
           ),
         ],
       ),
