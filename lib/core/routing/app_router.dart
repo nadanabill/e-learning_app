@@ -1,5 +1,10 @@
+import 'package:e_learning/core/di/dependency_injection.dart';
 import 'package:e_learning/features/learn/ui/learn_screen.dart';
+import 'package:e_learning/features/test/cubit/learn_test_cubit.dart';
+import 'package:e_learning/features/test/models/test_model.dart';
+import 'package:e_learning/features/test/ui/test_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../features/home/ui/layout_screen.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
 import 'routes.dart';
@@ -16,7 +21,9 @@ class AppRouter {
 
       case Routes.test:
         return MaterialPageRoute(
-          builder: (_) => TestScreen(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<LearnTestCubit>(),
+            child: const TestScreen(),
           ),
         );
       default:
