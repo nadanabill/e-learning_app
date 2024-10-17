@@ -8,13 +8,22 @@ class AnswerButtonWidget extends StatelessWidget {
   final String text;
   final Color color;
 
-  const AnswerButtonWidget({super.key, required this.text, required this.color});
+  final VoidCallback onTap;
+
+  const AnswerButtonWidget({
+    super.key,
+    required this.text,
+    required this.color,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
+        height: 70.h,
+        width: 140.w,
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(20.r), // Rounded corners
@@ -27,7 +36,6 @@ class AnswerButtonWidget extends StatelessWidget {
             ),
           ],
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
         child: Center(
           child: Text(
             text,
