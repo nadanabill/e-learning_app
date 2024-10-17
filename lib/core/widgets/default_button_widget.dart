@@ -40,7 +40,7 @@ class DefaultButtonWidget extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: elevation,
-          backgroundColor: color ?? AppColors.primary60,
+          backgroundColor: color ?? AppColors.primary80,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 40.r),
             side: hasSideBorder
