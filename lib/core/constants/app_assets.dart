@@ -20,6 +20,7 @@ class AppImages {
   static const String learnPage = '${AssetsPaths.images}/learn_page.png';
   static const String testPageSuccess =
       '${AssetsPaths.images}/test_page_success.png';
+  static const String googleLogo = '${AssetsPaths.images}/google_logo.png';
 }
 
 class AppIcons {}

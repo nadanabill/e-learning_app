@@ -13,6 +13,11 @@ ThemeData appTheme() => ThemeData(
           statusBarColor: Colors.transparent,
         ),
       ),
+      textSelectionTheme: const TextSelectionThemeData(
+        cursorColor: AppColors.primary100,
+        selectionColor: AppColors.primary40,
+        selectionHandleColor: AppColors.primary40,
+      ),
       scaffoldBackgroundColor: AppColors.white,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         type: BottomNavigationBarType.fixed,
