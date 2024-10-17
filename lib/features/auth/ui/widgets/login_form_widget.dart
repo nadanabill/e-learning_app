@@ -1,5 +1,7 @@
 import 'package:e_learning/core/constants/app_strings.dart';
+import 'package:e_learning/features/auth/logic/login/login_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helpers/spaces.dart';
@@ -13,42 +15,45 @@ class LoginFormWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final emailController = TextEditingController();
-    final passwordController = TextEditingController();
-    final formKey = GlobalKey<FormState>();
-    return Form(
-      key: formKey,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            AppStrings.inputYourEmail,
-            style: AppTextStyles.font16Medium,
+    return BlocBuilder<LoginCubit,LoginState>(
+      builder: (context, state) {
+        return Form(
+          key: context.read<LoginCubit>().formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                AppStrings.inputYourEmail,
+                style: AppTextStyles.font16Medium,
+              ),
+              DefaultTextFormFieldWidget(
+                textInputType: TextInputType.emailAddress,
+                controller: context.read<LoginCubit>().emailController,
+                validator: (email) => Validations.validateEmail(email),
+              ),
+              verticalSpace(10),
+              Text(
+                AppStrings.inputYourPassword,
+                style: AppTextStyles.font16Medium,
+              ),
+              DefaultTextFormFieldWidget(
+                obscureText: true,
+                controller: context.read<LoginCubit>().passwordController,
+                validator: (password) => Validations.validatePassword(password),
+                onFieldSubmitted: (value) {},
+              ),
+              verticalSpace(20),
+              DefaultButtonWidget(
+                text: AppStrings.login,
+                height: 58.h,
+                onPressed: () {
+                  context.read<LoginCubit>().login();
+                },
+              ),
+            ],
           ),
-          DefaultTextFormFieldWidget(
-            textInputType: TextInputType.emailAddress,
-            controller: emailController,
-            validator: (email) => Validations.validateEmail(email),
-          ),
-          verticalSpace(10),
-          Text(
-            AppStrings.inputYourPassword,
-            style: AppTextStyles.font16Medium,
-          ),
-          DefaultTextFormFieldWidget(
-            obscureText: true,
-            controller: passwordController,
-            validator: (password) => Validations.validatePassword(password),
-            onFieldSubmitted: (value) {},
-          ),
-          verticalSpace(20),
-          DefaultButtonWidget(
-            text: AppStrings.login,
-            height: 58.h,
-            onPressed: () {},
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 }
