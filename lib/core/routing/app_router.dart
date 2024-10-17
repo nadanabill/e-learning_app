@@ -1,4 +1,5 @@
 import 'package:e_learning/core/di/dependency_injection.dart';
+import 'package:e_learning/features/auth/logic/login/login_cubit.dart';
 import 'package:e_learning/features/auth/ui/login_screen.dart';
 import 'package:e_learning/features/learn/ui/learn_screen.dart';
 import 'package:e_learning/features/test/cubit/learn_test_cubit.dart';
@@ -28,7 +29,10 @@ class AppRouter {
         );
       case Routes.login:
         return MaterialPageRoute(
-          builder: (_) =>  const LoginScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<LoginCubit>(),
+            child: const LoginScreen(),
+          ),
         );
       default:
         return null;
