@@ -1,7 +1,7 @@
 import 'package:e_learning/core/di/dependency_injection.dart';
+import 'package:e_learning/features/auth/ui/login_screen.dart';
 import 'package:e_learning/features/learn/ui/learn_screen.dart';
 import 'package:e_learning/features/test/cubit/learn_test_cubit.dart';
-import 'package:e_learning/features/test/models/test_model.dart';
 import 'package:e_learning/features/test/ui/test_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,6 +25,10 @@ class AppRouter {
             create: (context) => getIt<LearnTestCubit>(),
             child: const TestScreen(),
           ),
+        );
+      case Routes.login:
+        return MaterialPageRoute(
+          builder: (_) =>  const LoginScreen(),
         );
       default:
         return null;
