@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/helpers/spaces.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/themes/app_text_styles.dart';
 import '../../../../../core/widgets/default_button_widget.dart';
@@ -52,7 +53,9 @@ class RegisterBodyWidget extends StatelessWidget {
               const Spacer(),
               DefaultButtonWidget(
                 text: AppStrings.next,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, Routes.ageScreen);
+                },
                 width: 127.w,
               ),
               horizontalSpace(5)
