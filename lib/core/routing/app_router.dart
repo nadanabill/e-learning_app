@@ -18,7 +18,12 @@ class AppRouter {
       case Routes.layout:
         return MaterialPageRoute(builder: (_) => const LayoutScreen());
       case Routes.learn:
-        return MaterialPageRoute(builder: (_) => const LearnScreen());
+        final subject = settings.arguments as String;
+        return MaterialPageRoute(
+          builder: (_) => LearnScreen(
+            subject: subject,
+          ),
+        );
 
       case Routes.test:
         return MaterialPageRoute(
