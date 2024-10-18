@@ -18,6 +18,7 @@ class LearnNowButtonWidget extends StatelessWidget {
         width: 240.w,
         text: '',
         onPressed: () {},
+        color: AppColors.primary60,
         widget: Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
