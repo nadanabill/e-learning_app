@@ -2,6 +2,7 @@ import 'package:e_learning/core/constants/app_strings.dart';
 import 'package:e_learning/features/auth/ui/register/Widgets/age_form_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../../../core/themes/app_text_styles.dart';
 
 class AgeScreen extends StatelessWidget {
@@ -22,7 +23,9 @@ class AgeScreen extends StatelessWidget {
             style: TextButton.styleFrom(
               padding: EdgeInsets.zero,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.nameScreen);
+            },
             child: Text(AppStrings.skip, style: AppTextStyles.font16Medium),
           ),
         ),
