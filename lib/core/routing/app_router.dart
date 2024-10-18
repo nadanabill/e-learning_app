@@ -6,6 +6,7 @@ import 'package:e_learning/features/test/cubit/learn_test_cubit.dart';
 import 'package:e_learning/features/test/ui/test_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../features/auth/ui/register/register_screen.dart';
 import '../../features/home/ui/layout_screen.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
 import 'routes.dart';
@@ -38,6 +39,10 @@ class AppRouter {
             create: (context) => getIt<LoginCubit>(),
             child: const LoginScreen(),
           ),
+        );
+      case Routes.register:
+        return MaterialPageRoute(
+          builder: (_) => const RegisterScreen(),
         );
       default:
         return null;

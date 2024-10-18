@@ -23,8 +23,10 @@ class OnboardingButtonsWidget extends StatelessWidget {
           children: [
             DefaultButtonWidget(
               text: '',
-              onPressed: () {},
-              width: 120.w,
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.register);
+              },
+              width: 140.w,
               color: AppColors.primary60,
               hasSideBorder: true,
               widget: Row(
@@ -49,7 +51,7 @@ class OnboardingButtonsWidget extends StatelessWidget {
                 );
               },
               color: AppColors.white,
-              width: 120.w,
+              width: 140.w,
               widget: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
