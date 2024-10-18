@@ -21,6 +21,10 @@ class AppImages {
   static const String testPageSuccess =
       '${AssetsPaths.images}/test_page_success.png';
   static const String googleLogo = '${AssetsPaths.images}/google_logo.png';
+  static const String registerImage =
+      '${AssetsPaths.images}/register_image.png';
+  static const String registerShape =
+      '${AssetsPaths.images}/register_shape.png';
 }
 
 class AppIcons {}
