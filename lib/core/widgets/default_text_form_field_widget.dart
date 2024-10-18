@@ -9,6 +9,7 @@ class DefaultTextFormFieldWidget extends StatefulWidget {
   final TextEditingController controller;
   final void Function(String)? onFieldSubmitted;
   bool? obscureText;
+  bool? centerText;
 
   DefaultTextFormFieldWidget({
     super.key,
@@ -17,6 +18,7 @@ class DefaultTextFormFieldWidget extends StatefulWidget {
     this.validator,
     this.obscureText,
     this.onFieldSubmitted,
+    this.centerText,
   });
 
   @override
@@ -30,8 +32,11 @@ class _DefaultTextFormFieldWidgetState
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: widget.textInputType,
+      textAlign: widget.centerText == null ? TextAlign.start : TextAlign.center,
       style: AppTextStyles.font16Regular.copyWith(
-          color: AppColors.black100, decorationColor: AppColors.primary100),
+        color: AppColors.black100,
+        decorationColor: AppColors.primary100,
+      ),
       controller: widget.controller,
       validator: widget.validator,
       obscureText: widget.obscureText ?? false,
