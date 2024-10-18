@@ -9,7 +9,14 @@ abstract class Validations {
     }
     return null;
   }
-
+static String? validateAge(String? age) {
+  if (age == null || age.isEmpty) {
+  return 'Please enter your age';
+  } else if (!AppRegExp.hasNumber(age)) {
+  return '🔴Please enter Correct Age';
+  }
+  return null;
+}
   static String? validateEmail(String? email) {
     if (email!.isEmpty) {
       return '🔴Email is required!';
