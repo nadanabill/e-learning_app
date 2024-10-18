@@ -14,4 +14,14 @@ class AppStrings {
   static const String inputYourPassword = 'Input Your Password';
   static const String loginWithGoogle = 'Login With Google';
   static const String doesNotHaveAccount = 'Doesn’t have account?';
+  static const String createYourProfile = 'Create Your Profile';
+  static const String now = 'Now!';
+  static const String createProfile = 'Create a profile to save your learning progress and keep learning for free!';
+  static const String back =  'Back';
+  static const String next = 'Next';
+  static const String skip = 'Skip';
+  static const String howOldAreYou =  'How old are you?';
+  static const String whatIsYourName = 'What is your name?';
+  static const String whatIsYourEmail = 'What is your email?';
+  static const String setUpYourPassword = 'Set up your password';
 }
