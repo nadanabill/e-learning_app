@@ -1,3 +1,4 @@
+import 'package:e_learning/core/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,11 +8,12 @@ import '../../../../core/themes/app_text_styles.dart';
 
 class HomeHeaderWidget extends StatelessWidget {
   final String name;
+
   const HomeHeaderWidget({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
-    return      Container(
+    return Container(
       width: double.infinity,
       padding: EdgeInsets.only(left: 30.w, bottom: 10.h),
       child: Row(
@@ -22,7 +24,9 @@ class HomeHeaderWidget extends StatelessWidget {
               children: [
                 Text(
                   "Hi, $name!",
-                  style: AppTextStyles.font22Medium,
+                  style: AppTextStyles.font22Medium.copyWith(
+                    color: AppColors.black100,
+                  ),
                 ),
                 Text(
                   AppStrings.whatLocalLanguage,

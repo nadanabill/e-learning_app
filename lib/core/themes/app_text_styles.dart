@@ -16,7 +16,7 @@ class AppTextStyles {
   static TextStyle font22Medium = TextStyle(
     fontSize: 22.sp,
     fontWeight: FontWeightHelper.medium,
-    color: AppColors.white,
+    color: AppColors.black100,
     fontFamily: fontFamily,
   );
   static TextStyle font10Medium = TextStyle(
