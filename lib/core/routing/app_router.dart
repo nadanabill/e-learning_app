@@ -1,6 +1,6 @@
 import 'package:e_learning/core/di/dependency_injection.dart';
 import 'package:e_learning/features/auth/logic/login/login_cubit.dart';
-import 'package:e_learning/features/auth/ui/login_screen.dart';
+import 'package:e_learning/features/auth/ui/login/login_screen.dart';
 import 'package:e_learning/features/learn/ui/learn_screen.dart';
 import 'package:e_learning/features/test/cubit/learn_test_cubit.dart';
 import 'package:e_learning/features/test/ui/test_screen.dart';
@@ -18,7 +18,12 @@ class AppRouter {
       case Routes.layout:
         return MaterialPageRoute(builder: (_) => const LayoutScreen());
       case Routes.learn:
-        return MaterialPageRoute(builder: (_) => const LearnScreen());
+        final subject = settings.arguments as String;
+        return MaterialPageRoute(
+          builder: (_) => LearnScreen(
+            subject: subject,
+          ),
+        );
 
       case Routes.test:
         return MaterialPageRoute(

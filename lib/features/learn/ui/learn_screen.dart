@@ -10,7 +10,9 @@ import '../models/learn_model.dart';
 import 'widgets/learn_item_widget.dart';
 
 class LearnScreen extends StatelessWidget {
-  const LearnScreen({super.key});
+  final String subject;
+
+  const LearnScreen({super.key, required this.subject});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class LearnScreen extends StatelessWidget {
                     Image.asset(AppImages.learnPage),
                     verticalSpace(10),
                     Text(
-                      'Learn Sundanese',
+                      'Learn $subject',
                       style: AppTextStyles.font28Regular,
                     ),
                     verticalSpace(15)

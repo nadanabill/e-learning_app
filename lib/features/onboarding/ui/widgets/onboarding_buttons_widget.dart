@@ -24,7 +24,8 @@ class OnboardingButtonsWidget extends StatelessWidget {
             DefaultButtonWidget(
               text: '',
               onPressed: () {},
-              width: 140.w,
+              width: 120.w,
+              color: AppColors.primary60,
               hasSideBorder: true,
               widget: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +49,7 @@ class OnboardingButtonsWidget extends StatelessWidget {
                 );
               },
               color: AppColors.white,
-              width: 140.w,
+              width: 120.w,
               widget: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

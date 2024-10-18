@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/app_assets.dart';
-import '../../../../core/constants/app_strings.dart';
-import '../../../../core/helpers/spaces.dart';
-import '../../../../core/themes/app_text_styles.dart';
+import '../../../../../core/constants/app_assets.dart';
+import '../../../../../core/constants/app_strings.dart';
+import '../../../../../core/helpers/spaces.dart';
+import '../../../../../core/themes/app_text_styles.dart';
 
 class LoginWithGoogleWidget extends StatelessWidget {
   const LoginWithGoogleWidget({super.key});

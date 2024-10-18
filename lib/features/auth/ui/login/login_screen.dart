@@ -1,11 +1,13 @@
 import 'package:e_learning/core/constants/app_assets.dart';
 import 'package:e_learning/core/helpers/spaces.dart';
 import 'package:e_learning/features/auth/logic/login/login_cubit.dart';
-import 'package:e_learning/features/auth/ui/widgets/do_not_have_account_widget.dart';
-import 'package:e_learning/features/auth/ui/widgets/login_form_widget.dart';
-import 'package:e_learning/features/auth/ui/widgets/login_with_google_widget.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'widgets/do_not_have_account_widget.dart';
+import 'widgets/login_form_widget.dart';
+import 'widgets/login_with_google_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

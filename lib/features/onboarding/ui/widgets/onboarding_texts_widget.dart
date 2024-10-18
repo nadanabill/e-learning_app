@@ -11,13 +11,14 @@ class OnboardingTextsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SizedBox(
-        height: 160.h,
-        child: PageView.builder(
-          controller: onboardingController,
-          itemCount: onboardingList.length,
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => Column(
+    return SizedBox(
+      height: 160.h,
+      child: PageView.builder(
+        controller: onboardingController,
+        itemCount: onboardingList.length,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) => SingleChildScrollView(
+          child: Column(
             children: [
               Text(
                 onboardingList[index].title,
@@ -26,8 +27,7 @@ class OnboardingTextsWidget extends StatelessWidget {
               ),
               verticalSpace(10),
               Padding(
-                padding:
-                EdgeInsets.symmetric(horizontal: 20.0.w),
+                padding: EdgeInsets.symmetric(horizontal: 20.0.w),
                 child: Text(
                   onboardingList[index].subtitle,
                   style: AppTextStyles.font16Regular,
@@ -37,7 +37,7 @@ class OnboardingTextsWidget extends StatelessWidget {
             ],
           ),
         ),
-
+      ),
     );
   }
 }

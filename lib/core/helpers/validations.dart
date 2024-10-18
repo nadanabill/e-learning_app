@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 import 'app_regexp.dart';
 
 abstract class Validations {
