@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/helpers/spaces.dart';
 import '../../../../../core/helpers/validations.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/themes/app_text_styles.dart';
 import '../../../../../core/widgets/app_bar_icon_widget.dart';
 import '../../../../../core/widgets/default_button_widget.dart';
@@ -44,7 +45,9 @@ class EmailFormWidget extends StatelessWidget {
           DefaultButtonWidget(
             text: AppStrings.next,
             onPressed: () {
-              if (emailFormKey.currentState!.validate()) {}
+              if (emailFormKey.currentState!.validate()) {
+                Navigator.pushNamed(context, Routes.passwordScreen);
+              }
             },
           ),
         ],
