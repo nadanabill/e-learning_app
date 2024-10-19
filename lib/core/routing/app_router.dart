@@ -3,6 +3,7 @@ import 'package:e_learning/features/auth/logic/login/login_cubit.dart';
 import 'package:e_learning/features/auth/ui/login/login_screen.dart';
 import 'package:e_learning/features/auth/ui/register/Name_screen.dart';
 import 'package:e_learning/features/auth/ui/register/age_screen.dart';
+import 'package:e_learning/features/auth/ui/register/email_screen.dart';
 import 'package:e_learning/features/learn/ui/learn_screen.dart';
 import 'package:e_learning/features/test/cubit/learn_test_cubit.dart';
 import 'package:e_learning/features/test/ui/test_screen.dart';
@@ -53,6 +54,10 @@ class AppRouter {
         case Routes.nameScreen:
         return MaterialPageRoute(
           builder: (_) => const NameScreen(),
+        );
+      case Routes.emailScreen:
+        return MaterialPageRoute(
+          builder: (_) => const EmailScreen(),
         );
       default:
         return null;
