@@ -9,6 +9,7 @@ import 'package:e_learning/features/test/cubit/learn_test_cubit.dart';
 import 'package:e_learning/features/test/ui/test_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../features/auth/ui/register/password_screen.dart';
 import '../../features/auth/ui/register/register_screen.dart';
 import '../../features/home/ui/layout_screen.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
@@ -51,13 +52,17 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const AgeScreen(),
         );
-        case Routes.nameScreen:
+      case Routes.nameScreen:
         return MaterialPageRoute(
           builder: (_) => const NameScreen(),
         );
       case Routes.emailScreen:
         return MaterialPageRoute(
           builder: (_) => const EmailScreen(),
+        );
+      case Routes.passwordScreen:
+        return MaterialPageRoute(
+          builder: (_) => const PasswordScreen(),
         );
       default:
         return null;
