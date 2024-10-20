@@ -41,6 +41,7 @@ class AgeFormWidget extends StatelessWidget {
             controller: context.read<RegisterCubit>().ageController,
             textInputType: TextInputType.number,
             validator: (value) => Validations.validateAge(value),
+            autoFocus: true,
           ),
           verticalSpace(30),
           DefaultButtonWidget(

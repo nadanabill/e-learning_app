@@ -10,6 +10,7 @@ class DefaultTextFormFieldWidget extends StatefulWidget {
   final void Function(String)? onFieldSubmitted;
   bool? obscureText;
   bool? centerText;
+  bool autoFocus;
 
   DefaultTextFormFieldWidget({
     super.key,
@@ -19,6 +20,7 @@ class DefaultTextFormFieldWidget extends StatefulWidget {
     this.obscureText,
     this.onFieldSubmitted,
     this.centerText,
+    this.autoFocus = false,
   });
 
   @override
@@ -37,6 +39,7 @@ class _DefaultTextFormFieldWidgetState
         color: AppColors.black100,
         decorationColor: AppColors.primary100,
       ),
+      autofocus: widget.autoFocus,
       controller: widget.controller,
       validator: widget.validator,
       obscureText: widget.obscureText ?? false,
