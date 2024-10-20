@@ -20,6 +20,7 @@ class AppStrings {
   static const String back =  'Back';
   static const String next = 'Next';
   static const String skip = 'Skip';
+  static const String start = 'Start';
   static const String howOldAreYou =  'How old are you?';
   static const String whatIsYourName = 'What is your name?';
   static const String whatIsYourEmail = 'What is your email?';
