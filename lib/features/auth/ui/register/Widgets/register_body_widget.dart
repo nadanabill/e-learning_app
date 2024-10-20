@@ -54,7 +54,7 @@ class RegisterBodyWidget extends StatelessWidget {
               DefaultButtonWidget(
                 text: AppStrings.next,
                 onPressed: () {
-                  Navigator.pushNamed(context, Routes.ageScreen);
+                  Navigator.pushNamed(context, Routes.ageScreen, arguments: context);
                 },
                 width: 127.w,
               ),
