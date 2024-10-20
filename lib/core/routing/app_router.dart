@@ -1,5 +1,6 @@
 import 'package:e_learning/core/di/dependency_injection.dart';
 import 'package:e_learning/features/auth/logic/login/login_cubit.dart';
+import 'package:e_learning/features/auth/logic/register/register_cubit.dart';
 import 'package:e_learning/features/auth/ui/login/login_screen.dart';
 import 'package:e_learning/features/auth/ui/register/Name_screen.dart';
 import 'package:e_learning/features/auth/ui/register/age_screen.dart';
@@ -46,23 +47,42 @@ class AppRouter {
         );
       case Routes.register:
         return MaterialPageRoute(
-          builder: (_) => const RegisterScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<RegisterCubit>(),
+            child: const RegisterScreen(),
+          ),
         );
       case Routes.ageScreen:
+        final ctx = settings.arguments as BuildContext;
         return MaterialPageRoute(
-          builder: (_) => const AgeScreen(),
+          builder: (context) => BlocProvider.value(
+            value: BlocProvider.of<RegisterCubit>(ctx),
+            child: const AgeScreen(),
+          ),
         );
       case Routes.nameScreen:
+        final ctx = settings.arguments as BuildContext;
         return MaterialPageRoute(
-          builder: (_) => const NameScreen(),
+          builder: (context) => BlocProvider.value(
+            value: BlocProvider.of<RegisterCubit>(ctx),
+            child: const NameScreen(),
+          ),
         );
       case Routes.emailScreen:
+        final ctx = settings.arguments as BuildContext;
         return MaterialPageRoute(
-          builder: (_) => const EmailScreen(),
+          builder: (context) => BlocProvider.value(
+            value: BlocProvider.of<RegisterCubit>(ctx),
+            child: const EmailScreen(),
+          ),
         );
       case Routes.passwordScreen:
+        final ctx = settings.arguments as BuildContext;
         return MaterialPageRoute(
-          builder: (_) => const PasswordScreen(),
+          builder: (context) => BlocProvider.value(
+            value: BlocProvider.of<RegisterCubit>(ctx),
+            child: const PasswordScreen(),
+          ),
         );
       default:
         return null;

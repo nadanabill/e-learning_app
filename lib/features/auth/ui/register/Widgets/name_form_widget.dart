@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/helpers/spaces.dart';
 import '../../../../../core/helpers/validations.dart';
@@ -7,16 +8,15 @@ import '../../../../../core/themes/app_text_styles.dart';
 import '../../../../../core/widgets/app_bar_icon_widget.dart';
 import '../../../../../core/widgets/default_button_widget.dart';
 import '../../../../../core/widgets/default_text_form_field_widget.dart';
+import '../../../logic/register/register_cubit.dart';
 
 class NameFormWidget extends StatelessWidget {
   const NameFormWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final nameController = TextEditingController();
-    final nameFormKey = GlobalKey<FormState>();
     return Form(
-      key: nameFormKey,
+      key: context.read<RegisterCubit>().nameFormKey,
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -37,7 +37,7 @@ class NameFormWidget extends StatelessWidget {
           verticalSpace(30),
           DefaultTextFormFieldWidget(
             centerText: true,
-            controller: nameController,
+            controller: context.read<RegisterCubit>().nameController,
             textInputType: TextInputType.number,
             validator: (value) => Validations.validateName(value),
           ),
@@ -45,9 +45,16 @@ class NameFormWidget extends StatelessWidget {
           DefaultButtonWidget(
             text: AppStrings.next,
             onPressed: () {
-              if (nameFormKey.currentState!.validate()) {
-                Navigator.pushNamed(context, Routes.emailScreen);
-
+              if (context
+                  .read<RegisterCubit>()
+                  .nameFormKey
+                  .currentState!
+                  .validate()) {
+                Navigator.pushNamed(
+                  context,
+                  Routes.emailScreen,
+                  arguments: context,
+                );
               }
             },
           ),

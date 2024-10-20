@@ -24,7 +24,7 @@ class AgeScreen extends StatelessWidget {
               padding: EdgeInsets.zero,
             ),
             onPressed: () {
-              Navigator.pushNamed(context, Routes.nameScreen);
+              Navigator.pushNamed(context, Routes.nameScreen, arguments: context);
             },
             child: Text(AppStrings.skip, style: AppTextStyles.font16Medium),
           ),
