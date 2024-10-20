@@ -1,4 +1,6 @@
+import 'package:e_learning/features/auth/logic/register/register_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/helpers/spaces.dart';
@@ -14,10 +16,8 @@ class AgeFormWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ageController = TextEditingController();
-    final ageFormKey = GlobalKey<FormState>();
     return Form(
-      key: ageFormKey,
+      key: context.read<RegisterCubit>().ageFormKey,
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -38,7 +38,7 @@ class AgeFormWidget extends StatelessWidget {
           verticalSpace(30),
           DefaultTextFormFieldWidget(
             centerText: true,
-            controller: ageController,
+            controller: context.read<RegisterCubit>().ageController,
             textInputType: TextInputType.number,
             validator: (value) => Validations.validateAge(value),
           ),
@@ -46,8 +46,13 @@ class AgeFormWidget extends StatelessWidget {
           DefaultButtonWidget(
             text: AppStrings.next,
             onPressed: () {
-              if (ageFormKey.currentState!.validate()) {
-                Navigator.pushNamed(context, Routes.nameScreen);
+              if (context
+                  .read<RegisterCubit>()
+                  .ageFormKey
+                  .currentState!
+                  .validate()) {
+                Navigator.pushNamed(context, Routes.nameScreen,
+                    arguments: context);
               }
             },
           ),

@@ -1,4 +1,6 @@
+import 'package:e_learning/features/auth/logic/register/register_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/helpers/spaces.dart';
 import '../../../../../core/helpers/validations.dart';
@@ -12,10 +14,8 @@ class PasswordFormWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final passwordController = TextEditingController();
-    final passwordFormKey = GlobalKey<FormState>();
     return Form(
-      key: passwordFormKey,
+      key: context.read<RegisterCubit>().passwordFormKey,
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -35,7 +35,7 @@ class PasswordFormWidget extends StatelessWidget {
           ),
           verticalSpace(30),
           DefaultTextFormFieldWidget(
-            controller: passwordController,
+            controller: context.read<RegisterCubit>().passwordController,
             obscureText: true,
             validator: (value) => Validations.validatePassword(value),
           ),
@@ -43,7 +43,11 @@ class PasswordFormWidget extends StatelessWidget {
           DefaultButtonWidget(
             text: AppStrings.next,
             onPressed: () {
-              if (passwordFormKey.currentState!.validate()) {}
+              if (context
+                  .read<RegisterCubit>()
+                  .passwordFormKey
+                  .currentState!
+                  .validate()) {}
             },
           ),
         ],

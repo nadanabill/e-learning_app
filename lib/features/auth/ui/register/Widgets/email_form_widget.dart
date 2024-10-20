@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/helpers/spaces.dart';
 import '../../../../../core/helpers/validations.dart';
@@ -7,16 +8,15 @@ import '../../../../../core/themes/app_text_styles.dart';
 import '../../../../../core/widgets/app_bar_icon_widget.dart';
 import '../../../../../core/widgets/default_button_widget.dart';
 import '../../../../../core/widgets/default_text_form_field_widget.dart';
+import '../../../logic/register/register_cubit.dart';
 
 class EmailFormWidget extends StatelessWidget {
   const EmailFormWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final emailController = TextEditingController();
-    final emailFormKey = GlobalKey<FormState>();
     return Form(
-      key: emailFormKey,
+      key: context.read<RegisterCubit>().emailFormKey,
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -37,7 +37,7 @@ class EmailFormWidget extends StatelessWidget {
           verticalSpace(30),
           DefaultTextFormFieldWidget(
             centerText: true,
-            controller: emailController,
+            controller: context.read<RegisterCubit>().emailController,
             textInputType: TextInputType.emailAddress,
             validator: (value) => Validations.validateEmail(value),
           ),
@@ -45,8 +45,16 @@ class EmailFormWidget extends StatelessWidget {
           DefaultButtonWidget(
             text: AppStrings.next,
             onPressed: () {
-              if (emailFormKey.currentState!.validate()) {
-                Navigator.pushNamed(context, Routes.passwordScreen);
+              if (context
+                  .read<RegisterCubit>()
+                  .emailFormKey
+                  .currentState!
+                  .validate()) {
+                Navigator.pushNamed(
+                  context,
+                  Routes.passwordScreen,
+                  arguments: context,
+                );
               }
             },
           ),
