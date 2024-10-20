@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/helpers/spaces.dart';
 import '../../../../../core/helpers/validations.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/themes/app_text_styles.dart';
 import '../../../../../core/widgets/app_bar_icon_widget.dart';
 import '../../../../../core/widgets/default_button_widget.dart';
@@ -41,13 +42,19 @@ class PasswordFormWidget extends StatelessWidget {
           ),
           verticalSpace(30),
           DefaultButtonWidget(
-            text: AppStrings.next,
+            text: AppStrings.start,
             onPressed: () {
               if (context
                   .read<RegisterCubit>()
                   .passwordFormKey
                   .currentState!
-                  .validate()) {}
+                  .validate()) {
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  Routes.layout,
+                  (route) => false,
+                );
+              }
             },
           ),
         ],
