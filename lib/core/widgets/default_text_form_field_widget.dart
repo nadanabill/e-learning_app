@@ -11,6 +11,7 @@ class DefaultTextFormFieldWidget extends StatefulWidget {
   bool? obscureText;
   bool? centerText;
   bool autoFocus;
+  int? maxLines;
 
   DefaultTextFormFieldWidget({
     super.key,
@@ -21,6 +22,7 @@ class DefaultTextFormFieldWidget extends StatefulWidget {
     this.onFieldSubmitted,
     this.centerText,
     this.autoFocus = false,
+    this.maxLines,
   });
 
   @override
@@ -39,12 +41,14 @@ class _DefaultTextFormFieldWidgetState
         color: AppColors.black100,
         decorationColor: AppColors.primary100,
       ),
+      maxLines: widget.maxLines ?? 1,
       autofocus: widget.autoFocus,
       controller: widget.controller,
       validator: widget.validator,
       obscureText: widget.obscureText ?? false,
       onFieldSubmitted: widget.onFieldSubmitted,
       decoration: InputDecoration(
+        contentPadding: const EdgeInsets.all(20),
         suffixIcon: widget.obscureText != null
             ? IconButton(
                 icon: Icon(
