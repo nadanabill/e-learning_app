@@ -1,3 +1,4 @@
+import 'package:e_learning/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -27,8 +28,8 @@ class ResultWidget extends StatelessWidget {
         children: [
           Text(
             correct ? 'Amazing!!' : 'Ups.. that’s wrong',
-            style: AppTextStyles.font20Medium
-                .copyWith(color: correct? AppColors.success100 : AppColors.error100),
+            style: AppTextStyles.font20Medium.copyWith(
+                color: correct ? AppColors.success100 : AppColors.error100),
           ),
           verticalSpace(2),
           Row(
@@ -50,8 +51,10 @@ class ResultWidget extends StatelessWidget {
           verticalSpace(5),
           DefaultButtonWidget(
             text: 'Next Question',
-            onPressed: () {},
-            color:correct? AppColors.success100 : AppColors.error100,
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.test2);
+            },
+            color: correct ? AppColors.success100 : AppColors.error100,
           ),
         ],
       ),
