@@ -39,6 +39,7 @@ class PasswordFormWidget extends StatelessWidget {
             controller: context.read<RegisterCubit>().passwordController,
             obscureText: true,
             validator: (value) => Validations.validatePassword(value),
+            autoFocus: true,
           ),
           verticalSpace(30),
           DefaultButtonWidget(

@@ -25,4 +25,5 @@ class AppStrings {
   static const String whatIsYourName = 'What is your name?';
   static const String whatIsYourEmail = 'What is your email?';
   static const String setUpYourPassword = 'Set up your password';
+  static const String checkAnswer = 'Check Answer';
 }

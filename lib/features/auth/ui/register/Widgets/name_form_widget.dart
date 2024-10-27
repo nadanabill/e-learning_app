@@ -40,6 +40,7 @@ class NameFormWidget extends StatelessWidget {
             controller: context.read<RegisterCubit>().nameController,
             textInputType: TextInputType.number,
             validator: (value) => Validations.validateName(value),
+            autoFocus: true,
           ),
           verticalSpace(30),
           DefaultButtonWidget(

@@ -40,6 +40,7 @@ class EmailFormWidget extends StatelessWidget {
             controller: context.read<RegisterCubit>().emailController,
             textInputType: TextInputType.emailAddress,
             validator: (value) => Validations.validateEmail(value),
+            autoFocus: true,
           ),
           verticalSpace(30),
           DefaultButtonWidget(

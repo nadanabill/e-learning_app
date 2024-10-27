@@ -1,4 +1,3 @@
-import 'package:e_learning/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,16 +6,17 @@ import '../../../../core/themes/app_colors.dart';
 import '../../../../core/themes/app_text_styles.dart';
 import '../../../../core/widgets/default_button_widget.dart';
 
-class ResultWidget extends StatelessWidget {
+class Test2ResultWidget extends StatelessWidget {
   final bool correct;
   final String answer;
 
-  const ResultWidget({super.key, required this.correct, required this.answer});
+  const Test2ResultWidget(
+      {super.key, required this.correct, required this.answer});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150.h,
+      height: 220.h,
       width: double.infinity,
       decoration: BoxDecoration(
         color: correct ? const Color(0xffF5FFD8) : const Color(0xffFFDDD8),
@@ -27,33 +27,31 @@ class ResultWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            correct ? 'Amazing!!' : 'Ups.. that’s wrong',
+            correct ? 'That’s right!' : 'Ups.. That’s not quite right',
             style: AppTextStyles.font20Medium.copyWith(
                 color: correct ? AppColors.success100 : AppColors.error100),
           ),
           verticalSpace(2),
-          Row(
-            children: [
-              Text(
-                'Answer:  ',
-                style: AppTextStyles.font17Medium.copyWith(
-                  color: correct ? AppColors.success100 : AppColors.error100,
-                ),
+          Text(
+            'Answer:  ',
+            style: AppTextStyles.font17Medium.copyWith(
+              color: correct ? AppColors.success100 : AppColors.error100,
+            ),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: Text(
+              answer,
+              style: AppTextStyles.font18Light.copyWith(
+                color: correct ? AppColors.success100 : AppColors.error100,
               ),
-              Text(
-                answer,
-                style: AppTextStyles.font13Regular.copyWith(
-                  color: correct ? AppColors.success100 : AppColors.error100,
-                ),
-              ),
-            ],
+            ),
           ),
           verticalSpace(5),
+          Spacer(),
           DefaultButtonWidget(
             text: 'Next Question',
-            onPressed: () {
-              Navigator.pushNamed(context, Routes.test2);
-            },
+            onPressed: () {},
             color: correct ? AppColors.success100 : AppColors.error100,
           ),
         ],

@@ -115,4 +115,10 @@ class AppTextStyles {
     color: AppColors.black10,
     fontFamily: fontFamily,
   );
+  static TextStyle font18Light = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.light,
+    color: AppColors.black10,
+    fontFamily: fontFamily,
+  );
 }
