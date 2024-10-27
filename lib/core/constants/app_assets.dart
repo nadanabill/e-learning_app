@@ -25,6 +25,9 @@ class AppImages {
       '${AssetsPaths.images}/register_image.png';
   static const String registerShape =
       '${AssetsPaths.images}/register_shape.png';
+  static const String volumeButton = '${AssetsPaths.images}/volume_button.png';
+  static const String xCircle = '${AssetsPaths.images}/' 'x_circle.png';
+  static const String checkCircle = '${AssetsPaths.images}/' 'check_circle.png';
 }
 
 class AppIcons {}
