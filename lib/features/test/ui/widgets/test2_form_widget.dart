@@ -1,4 +1,6 @@
+import 'package:e_learning/features/test/cubit/learn_test_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/widgets/default_text_form_field_widget.dart';
@@ -15,14 +17,13 @@ class Test2FormWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final testController = TextEditingController();
-
     return Form(
+      key: context.read<LearnTestCubit>().test2FormKey,
       child: Stack(
         alignment: Alignment.bottomRight,
         children: [
           DefaultTextFormFieldWidget(
-            controller: testController,
+            controller: context.read<LearnTestCubit>().test2Controller,
             maxLines: 5,
             validator: (value) {
               if (value == null || value.isEmpty) {

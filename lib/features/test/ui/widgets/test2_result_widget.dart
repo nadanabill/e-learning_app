@@ -10,8 +10,11 @@ class Test2ResultWidget extends StatelessWidget {
   final bool correct;
   final String answer;
 
-  const Test2ResultWidget(
-      {super.key, required this.correct, required this.answer});
+  const Test2ResultWidget({
+    super.key,
+    required this.correct,
+    required this.answer,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class Test2ResultWidget extends StatelessWidget {
         color: correct ? const Color(0xffF5FFD8) : const Color(0xffFFDDD8),
         borderRadius: BorderRadius.circular(10.r),
       ),
-      padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 15.w),
+      padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 15.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -48,7 +51,7 @@ class Test2ResultWidget extends StatelessWidget {
             ),
           ),
           verticalSpace(5),
-          Spacer(),
+          const Spacer(),
           DefaultButtonWidget(
             text: 'Next Question',
             onPressed: () {},
