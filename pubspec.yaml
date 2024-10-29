@@ -45,7 +45,7 @@ dependencies:
   shared_preferences:
 # Device preview
   device_preview:
-
+  audioplayers:
   flutter_lints: ^3.0.0
 
 flutter:
@@ -56,6 +56,7 @@ flutter:
     - assets/images/
     - assets/lotties/
     - assets/translations/
+    - assets/audio/
 
 
 
