@@ -15,6 +15,7 @@ import '../../features/auth/ui/register/register_screen.dart';
 import '../../features/home/ui/layout_screen.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
 import '../../features/test/ui/test2_screen.dart';
+import '../../features/test/ui/test3_screen.dart';
 import 'routes.dart';
 
 class AppRouter {
@@ -44,6 +45,13 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => getIt<LearnTestCubit>(),
             child: const Test2Screen(),
+          ),
+        );
+      case Routes.test3:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<LearnTestCubit>(),
+            child: const Test3Screen(),
           ),
         );
       case Routes.login:
