@@ -10,4 +10,5 @@ class Routes {
   static const String learn = "/learn";
   static const String test = "/test";
   static const String test2 = "/test2";
+  static const String test3 = "/test3";
 }

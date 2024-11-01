@@ -28,6 +28,7 @@ class AppImages {
   static const String volumeButton = '${AssetsPaths.images}/volume_button.png';
   static const String xCircle = '${AssetsPaths.images}/' 'x_circle.png';
   static const String checkCircle = '${AssetsPaths.images}/' 'check_circle.png';
+  static const String person = '${AssetsPaths.images}/person.png';
 }
 
 class AppIcons {}
