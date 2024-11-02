@@ -1,4 +1,6 @@
+import 'package:e_learning/features/test/cubit/learn_test_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/themes/app_colors.dart';
@@ -20,8 +22,14 @@ class Test3SentenceWidget extends StatelessWidget {
             children: [
               Text(
                 item["text"],
-                style: AppTextStyles.font20Medium
-                    .copyWith(color: AppColors.primary100),
+                style: AppTextStyles.font20Medium.copyWith(
+                    color: BlocProvider.of<LearnTestCubit>(context).state
+                            is Test3Success
+                        ? AppColors.success100
+                        : BlocProvider.of<LearnTestCubit>(context).state
+                                is Test3Failure
+                            ? AppColors.error100
+                            : AppColors.primary100),
               ),
               Container(
                 width: 80.w,
