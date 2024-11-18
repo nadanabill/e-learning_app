@@ -26,4 +26,6 @@ class AppStrings {
   static const String whatIsYourEmail = 'What is your email?';
   static const String setUpYourPassword = 'Set up your password';
   static const String checkAnswer = 'Check Answer';
+  static const String category = 'Category:';
+  static const String previousLanguageCourses = 'Previous Language Courses';
 }
