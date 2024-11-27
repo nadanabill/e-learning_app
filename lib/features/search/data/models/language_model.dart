@@ -12,7 +12,8 @@ class LanguageModel {
 
 List<LanguageModel> languages=[
   LanguageModel(name: 'Sundanese', image: AppImages.language1),
-  LanguageModel(name: 'Sundanese', image: AppImages.language2),
-  LanguageModel(name: 'Sundanese', image: AppImages.language3),
+  LanguageModel(name: 'Javanese', image: AppImages.language2),
+  LanguageModel(name: 'Minangkabau', image: AppImages.language3),
+  LanguageModel(name: 'Betawi', image: AppImages.language3),
 ];
 
