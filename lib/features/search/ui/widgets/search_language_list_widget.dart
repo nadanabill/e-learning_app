@@ -1,3 +1,4 @@
+import 'package:e_learning/features/search/data/models/language_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,9 +15,9 @@ class SearchLanguageListWidget extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20),
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const SearchLanguageWidget(),
+        itemBuilder: (context, index) =>  SearchLanguageWidget(language: languages[index],),
         separatorBuilder: (context, index) => horizontalSpace(10),
-        itemCount: 4,
+        itemCount: languages.length,
       ),
     );
   }

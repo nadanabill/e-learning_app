@@ -1,3 +1,4 @@
+import 'package:e_learning/features/search/data/models/language_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -6,7 +7,8 @@ import '../../../../core/helpers/spaces.dart';
 import '../../../../core/themes/app_text_styles.dart';
 
 class SearchLanguageWidget extends StatelessWidget {
-  const SearchLanguageWidget({super.key});
+  final LanguageModel language;
+  const SearchLanguageWidget({super.key, required this.language});
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +21,12 @@ class SearchLanguageWidget extends StatelessWidget {
           BoxDecoration(borderRadius: BorderRadius.circular(16)),
           clipBehavior: Clip.antiAlias,
           child: Image.asset(
-            AppImages.language1,
+            language.image,
           ),
         ),
         verticalSpace(20),
         Text(
-          'Sundanese',
+          language.name,
           style: AppTextStyles.font14Medium,
         ),
       ],
