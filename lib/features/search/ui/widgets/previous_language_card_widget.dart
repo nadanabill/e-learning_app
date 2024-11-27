@@ -1,3 +1,4 @@
+import 'package:e_learning/features/search/data/models/previous_language_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -6,7 +7,9 @@ import '../../../../core/themes/app_colors.dart';
 import '../../../../core/themes/app_text_styles.dart';
 
 class PreviousLanguageCardWidget extends StatelessWidget {
-  const PreviousLanguageCardWidget({super.key});
+  final PreviousLanguageModel language;
+
+  const PreviousLanguageCardWidget({super.key, required this.language});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,7 @@ class PreviousLanguageCardWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(37),
           ),
           clipBehavior: Clip.antiAlias,
-          child: Image.asset('assets/images/sundanese.png'),
+          child: Image.asset(language.image),
         ),
         horizontalSpace(10),
         Expanded(
@@ -38,12 +41,12 @@ class PreviousLanguageCardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Sundanese',
+                language.name,
                 style: AppTextStyles.font20Medium
                     .copyWith(color: AppColors.black100),
               ),
               Text(
-                'Introduction',
+                language.subTitle,
                 style: AppTextStyles.font14Regular
                     .copyWith(color: AppColors.black80),
               ),

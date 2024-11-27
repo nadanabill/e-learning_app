@@ -1,6 +1,7 @@
 import 'package:e_learning/core/helpers/spaces.dart';
 import 'package:e_learning/core/themes/app_colors.dart';
 import 'package:e_learning/core/themes/app_text_styles.dart';
+import 'package:e_learning/features/search/data/models/previous_language_model.dart';
 import 'package:e_learning/features/search/ui/widgets/previous_language_card_widget.dart';
 import 'package:e_learning/features/search/ui/widgets/search_header_widget.dart';
 import 'package:e_learning/features/search/ui/widgets/search_language_list_widget.dart';
@@ -55,12 +56,14 @@ class SearchScreen extends StatelessWidget {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) {
-                return const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20),
-                  child: PreviousLanguageCardWidget(),
+                return Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
+                  child: PreviousLanguageCardWidget(
+                    language: previousLanguageCourses[index],
+                  ),
                 );
               },
-              childCount: 3,
+              childCount: previousLanguageCourses.length,
             ),
           ),
         ],
