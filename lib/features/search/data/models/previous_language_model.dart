@@ -19,11 +19,11 @@ List<PreviousLanguageModel> previousLanguageCourses =[
   PreviousLanguageModel(
     name: 'Balinese',
     image: 'assets/images/balinese.png',
-    subTitle: 'Introduction',
+    subTitle: 'Grammar',
   ),
   PreviousLanguageModel(
     name: 'Aceh',
     image: 'assets/images/aceh.png',
-    subTitle: 'Introduction',
+    subTitle: 'Pronunciation',
   ),
 ];
