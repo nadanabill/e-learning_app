@@ -16,16 +16,21 @@ class AppStrings {
   static const String doesNotHaveAccount = 'Doesn’t have account?';
   static const String createYourProfile = 'Create Your Profile';
   static const String now = 'Now!';
-  static const String createProfile = 'Create a profile to save your learning progress and keep learning for free!';
-  static const String back =  'Back';
+  static const String createProfile =
+      'Create a profile to save your learning progress and keep learning for free!';
+  static const String back = 'Back';
   static const String next = 'Next';
   static const String skip = 'Skip';
   static const String start = 'Start';
-  static const String howOldAreYou =  'How old are you?';
+  static const String howOldAreYou = 'How old are you?';
   static const String whatIsYourName = 'What is your name?';
   static const String whatIsYourEmail = 'What is your email?';
   static const String setUpYourPassword = 'Set up your password';
   static const String checkAnswer = 'Check Answer';
   static const String category = 'Category:';
   static const String previousLanguageCourses = 'Previous Language Courses';
+  static const String notFound = 'Not Found';
+
+  static const String notFoundBody =
+      'Sorry, the keyword you entered cannot be found, please check again or search with another keyword.';
 }
