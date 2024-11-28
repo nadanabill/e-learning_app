@@ -7,6 +7,12 @@ import 'font_weight_helper.dart';
 class AppTextStyles {
   static const String fontFamily = 'lexend';
 
+  static TextStyle font20Bold = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColors.black10,
+    fontFamily: fontFamily,
+  );
   static TextStyle font24Bold = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.bold,
@@ -113,6 +119,12 @@ class AppTextStyles {
     fontSize: 32.sp,
     fontWeight: FontWeightHelper.semiBold,
     color: AppColors.black10,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font14Light = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.light,
+    color: AppColors.black100,
     fontFamily: fontFamily,
   );
   static TextStyle font18Light = TextStyle(
