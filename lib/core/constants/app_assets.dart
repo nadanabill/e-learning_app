@@ -41,3 +41,4 @@ class AppIcons {}
 class AppLotties {}
 
 class AppSvgs {}
+  static const String notFound = '${AssetsPaths.svgs}/not_found.svg';
