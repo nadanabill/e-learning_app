@@ -29,16 +29,20 @@ class AppImages {
   static const String xCircle = '${AssetsPaths.images}/' 'x_circle.png';
   static const String checkCircle = '${AssetsPaths.images}/' 'check_circle.png';
   static const String person = '${AssetsPaths.images}/person.png';
-  static const String searchBackground = '${AssetsPaths.images}/search_background.png';
+  static const String searchBackground =
+      '${AssetsPaths.images}/search_background.png';
   static const String language1 = '${AssetsPaths.images}/language1.png';
   static const String language2 = '${AssetsPaths.images}/language2.png';
   static const String language3 = '${AssetsPaths.images}/language3.png';
-
+  static const String minangkabau = '${AssetsPaths.images}/minangkabau.png';
+  static const String notConnected = '${AssetsPaths.images}/not_connected.png';
 }
 
 class AppIcons {}
 
 class AppLotties {}
 
-class AppSvgs {}
+class AppSvgs {
+  static const String notConnected = '${AssetsPaths.svgs}/not_connected.svg';
   static const String notFound = '${AssetsPaths.svgs}/not_found.svg';
+}
