@@ -30,7 +30,9 @@ class AppStrings {
   static const String category = 'Category:';
   static const String previousLanguageCourses = 'Previous Language Courses';
   static const String notFound = 'Not Found';
-
   static const String notFoundBody =
       'Sorry, the keyword you entered cannot be found, please check again or search with another keyword.';
+  static const String notConnected = "Not Connected";
+  static const String connectedBody =
+      'Ups.. You are not connected to internet\nTry again';
 }
