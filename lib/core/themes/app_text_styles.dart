@@ -37,6 +37,18 @@ class AppTextStyles {
     color: AppColors.white,
     fontFamily: fontFamily,
   );
+  static TextStyle font12LightBlack = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.light,
+    color: AppColors.black100,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font12RegularWhite = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.white,
+    fontFamily: fontFamily,
+  );
   static TextStyle font14Medium = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.medium,
@@ -94,6 +106,24 @@ class AppTextStyles {
   static TextStyle font18Regular = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeightHelper.regular,
+    color: AppColors.white,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font18RegularBlack100 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.black100,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font18MediumBlack100 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.black100,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font18MediumWhite = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.medium,
     color: AppColors.white,
     fontFamily: fontFamily,
   );
