@@ -6,12 +6,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 ThemeData appTheme() => ThemeData(
       primaryColor: AppColors.primary100,
-      appBarTheme: const AppBarTheme(
+      appBarTheme:  const AppBarTheme(
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarIconBrightness: Brightness.dark,
-          statusBarBrightness: Brightness.dark,
+          statusBarIconBrightness: Brightness.light,
+          statusBarBrightness: Brightness.light,
           statusBarColor: Colors.transparent,
         ),
+        backgroundColor: AppColors.white,
+        scrolledUnderElevation: 0,
+        elevation: 0.0,
+        shadowColor: AppColors.white,
       ),
       textSelectionTheme: const TextSelectionThemeData(
         cursorColor: AppColors.primary100,
@@ -31,5 +35,6 @@ ThemeData appTheme() => ThemeData(
           fontSize: 12.sp,
           fontWeight: FontWeightHelper.regular,
         ),
+        backgroundColor: AppColors.white,
       ),
     );
