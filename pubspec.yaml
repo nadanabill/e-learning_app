@@ -41,6 +41,8 @@ dependencies:
   flutter_svg:
   lottie:
   smooth_page_indicator:
+  percent_indicator:
+  flutter_rating_bar:
 # Data Storage
   shared_preferences:
 # Device preview
