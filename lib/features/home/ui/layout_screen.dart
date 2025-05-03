@@ -1,5 +1,6 @@
 import 'package:e_learning/core/constants/app_assets.dart';
 import 'package:e_learning/core/constants/app_strings.dart';
+import 'package:e_learning/features/achievement/ui/achievement_screen.dart';
 import 'package:e_learning/features/home/ui/home_screen.dart';
 import 'package:e_learning/features/search/ui/search_screen.dart';
 import 'package:flutter/material.dart';
@@ -13,21 +14,19 @@ class LayoutScreen extends StatefulWidget {
 
 class _LayoutScreenState extends State<LayoutScreen> {
   int selectedIndex = 0;
-  List<Widget> screens =  [
+  List<Widget> screens = [
     const HomeScreen(),
     const SearchScreen(),
-    const Text('achievement'),
+    const AchievementScreen(),
     const Text('profile'),
-
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        onTap: (index){
+        onTap: (index) {
           setState(() {
             selectedIndex = index;
           });
