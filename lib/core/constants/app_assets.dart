@@ -36,6 +36,9 @@ class AppImages {
   static const String language3 = '${AssetsPaths.images}/language3.png';
   static const String minangkabau = '${AssetsPaths.images}/minangkabau.png';
   static const String notConnected = '${AssetsPaths.images}/not_connected.png';
+  static const String profileImage = '${AssetsPaths.images}/profile_image.png';
+  static const String profileHeader =
+      '${AssetsPaths.images}/profile_header.png';
 }
 
 class AppIcons {}
@@ -45,4 +48,9 @@ class AppLotties {}
 class AppSvgs {
   static const String notConnected = '${AssetsPaths.svgs}/not_connected.svg';
   static const String notFound = '${AssetsPaths.svgs}/not_found.svg';
+  static const String edit = '${AssetsPaths.svgs}/edit.svg';
+  static const String achievementsIcon =
+      '${AssetsPaths.svgs}/achievements_icon.svg';
+  static const String privacyIcon = '${AssetsPaths.svgs}/privacy_icon.svg';
+  static const String settingsIcon = '${AssetsPaths.svgs}/settings_icon.svg';
 }
