@@ -2,6 +2,7 @@ import 'package:e_learning/core/constants/app_assets.dart';
 import 'package:e_learning/core/constants/app_strings.dart';
 import 'package:e_learning/features/achievement/ui/achievement_screen.dart';
 import 'package:e_learning/features/home/ui/home_screen.dart';
+import 'package:e_learning/features/profile/ui/profile_screen.dart';
 import 'package:e_learning/features/search/ui/search_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
     const HomeScreen(),
     const SearchScreen(),
     const AchievementScreen(),
-    const Text('profile'),
+    const ProfileScreen(),
   ];
 
   @override
