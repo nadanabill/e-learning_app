@@ -85,6 +85,12 @@ class AppTextStyles {
     color: AppColors.black100,
     fontFamily: fontFamily,
   );
+  static TextStyle font12RegularBlack80 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.black80,
+    fontFamily: fontFamily,
+  );
   static TextStyle font13Regular = TextStyle(
     fontSize: 13.sp,
     fontWeight: FontWeightHelper.regular,
@@ -111,6 +117,12 @@ class AppTextStyles {
   );
   static TextStyle font18RegularBlack100 = TextStyle(
     fontSize: 18.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.black100,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font20RegularBlack100 = TextStyle(
+    fontSize: 20.sp,
     fontWeight: FontWeightHelper.regular,
     color: AppColors.black100,
     fontFamily: fontFamily,
@@ -161,6 +173,18 @@ class AppTextStyles {
     fontSize: 18.sp,
     fontWeight: FontWeightHelper.light,
     color: AppColors.black10,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font10RegularBlack80 = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.black80,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font12RegularBlack60 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.black60,
     fontFamily: fontFamily,
   );
 }
