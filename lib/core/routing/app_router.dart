@@ -1,4 +1,5 @@
 import 'package:e_learning/core/di/dependency_injection.dart';
+import 'package:e_learning/features/Settings/ui/settings_screen.dart';
 import 'package:e_learning/features/auth/logic/login/login_cubit.dart';
 import 'package:e_learning/features/auth/logic/register/register_cubit.dart';
 import 'package:e_learning/features/auth/ui/login/login_screen.dart';
@@ -100,6 +101,8 @@ class AppRouter {
             child: const PasswordScreen(),
           ),
         );
+      case Routes.settingsScreen:
+        return MaterialPageRoute(builder: (_) => const SettingsScreen());
       default:
         return null;
     }

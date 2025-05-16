@@ -34,7 +34,7 @@ class MyAccountWidget extends StatelessWidget {
             child: Text(
               'Switch to Another Account',
               style: AppTextStyles.font14Medium.copyWith(
-                color: AppColors.primary100,
+                color: const Color(0xFF3E5FAF),
               ),
             ),
           ),
