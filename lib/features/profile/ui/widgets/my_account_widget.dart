@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/helpers/spaces.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/themes/app_text_styles.dart';
+import '../../../../core/utils/logout_dialog.dart';
 
 class MyAccountWidget extends StatelessWidget {
   const MyAccountWidget({super.key});
@@ -40,7 +41,9 @@ class MyAccountWidget extends StatelessWidget {
           ),
           verticalSpace(16),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              showLogoutDialog(context);
+            },
             child: Text(
               'Logout Account',
               style: AppTextStyles.font14Medium.copyWith(
