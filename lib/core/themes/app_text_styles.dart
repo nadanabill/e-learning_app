@@ -187,4 +187,16 @@ class AppTextStyles {
     color: AppColors.black60,
     fontFamily: fontFamily,
   );
+  static TextStyle font16RegularBlack100 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.black100,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font24BoldBlack100 = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.black100,
+    fontFamily: fontFamily,
+  );
 }
