@@ -1,4 +1,5 @@
 import 'package:e_learning/core/constants/app_assets.dart';
+import 'package:e_learning/core/routing/routes.dart';
 
 enum DashboardType { New, Action, Non }
 
@@ -23,7 +24,7 @@ List<DashboardModel> dashboardList = [
     title: 'Settings',
     image: AppSvgs.settingsIcon,
     type: DashboardType.Non,
-    routeName: '/settings',
+    routeName: Routes.settingsScreen,
   ),
   DashboardModel(
     title: 'Achievements',
