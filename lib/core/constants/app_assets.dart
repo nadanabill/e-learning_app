@@ -39,6 +39,7 @@ class AppImages {
   static const String profileImage = '${AssetsPaths.images}/profile_image.png';
   static const String profileHeader =
       '${AssetsPaths.images}/profile_header.png';
+  static const String toggle = '${AssetsPaths.images}/toggle.png';
 }
 
 class AppIcons {}
