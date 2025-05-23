@@ -15,11 +15,20 @@ void showLogoutDialog(BuildContext context) {
     ),
     builder: (BuildContext context) {
       return Container(
-        height: MediaQuery.sizeOf(context).height * 0.35,
+        height: MediaQuery.sizeOf(context).height * 0.40,
         padding:
             const EdgeInsets.only(left: 23.0, right: 23.0, bottom: 19, top: 30),
         child: Column(
           children: [
+            Container(
+              height: 5,
+              width: 48,
+              decoration: BoxDecoration(
+                color: AppColors.black40,
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+            verticalSpace(30),
             Text(
               'Logout Account?',
               style: AppTextStyles.font24BoldBlack100,
