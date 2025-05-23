@@ -39,6 +39,7 @@ class AppImages {
   static const String profileImage = '${AssetsPaths.images}/profile_image.png';
   static const String profileHeader =
       '${AssetsPaths.images}/profile_header.png';
+  static const String editIcon = '${AssetsPaths.images}/edit_icon.png';
   static const String toggle = '${AssetsPaths.images}/toggle.png';
 }
 
@@ -54,4 +55,6 @@ class AppSvgs {
       '${AssetsPaths.svgs}/achievements_icon.svg';
   static const String privacyIcon = '${AssetsPaths.svgs}/privacy_icon.svg';
   static const String settingsIcon = '${AssetsPaths.svgs}/settings_icon.svg';
+  static const String eye = '${AssetsPaths.svgs}/eye.svg';
+  static const String eyeSlash = '${AssetsPaths.svgs}/eye_slash.svg';
 }
