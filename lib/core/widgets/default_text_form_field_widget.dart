@@ -1,4 +1,6 @@
+import 'package:e_learning/core/constants/app_assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../themes/app_colors.dart';
 import '../themes/app_text_styles.dart';
@@ -12,6 +14,9 @@ class DefaultTextFormFieldWidget extends StatefulWidget {
   bool? centerText;
   bool autoFocus;
   int? maxLines;
+  final Color? textColor;
+  final void Function(String)? onChange;
+  bool? isValid;
 
   DefaultTextFormFieldWidget({
     super.key,
@@ -23,6 +28,9 @@ class DefaultTextFormFieldWidget extends StatefulWidget {
     this.centerText,
     this.autoFocus = false,
     this.maxLines,
+    this.textColor,
+    this.onChange,
+    this.isValid,
   });
 
   @override
@@ -35,10 +43,11 @@ class _DefaultTextFormFieldWidgetState
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: widget.onChange,
       keyboardType: widget.textInputType,
       textAlign: widget.centerText == null ? TextAlign.start : TextAlign.center,
       style: AppTextStyles.font16Regular.copyWith(
-        color: AppColors.black100,
+        color: widget.textColor ?? AppColors.black100,
         decorationColor: AppColors.primary100,
       ),
       maxLines: widget.maxLines ?? 1,
@@ -48,13 +57,14 @@ class _DefaultTextFormFieldWidgetState
       obscureText: widget.obscureText ?? false,
       onFieldSubmitted: widget.onFieldSubmitted,
       decoration: InputDecoration(
+        errorStyle: AppTextStyles.font14Regular.copyWith(
+          color: Colors.red,
+        ),
         contentPadding: const EdgeInsets.all(20),
         suffixIcon: widget.obscureText != null
             ? IconButton(
-                icon: Icon(
-                  widget.obscureText!
-                      ? Icons.visibility_outlined
-                      : Icons.visibility_off_rounded,
+                icon: SvgPicture.asset(
+                  widget.obscureText! ? AppSvgs.eye : AppSvgs.eyeSlash,
                   color: AppColors.black80,
                 ),
                 onPressed: () {
@@ -64,10 +74,36 @@ class _DefaultTextFormFieldWidgetState
               )
             : null,
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: AppColors.primary100),
+          borderSide: BorderSide(
+            color: widget.isValid == null
+                ? AppColors.primary100
+                : widget.isValid!
+                    ? Colors.green
+                    : Colors.red,
+          ),
           borderRadius: BorderRadius.circular(40),
         ),
         border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(40),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: widget.isValid == null
+                ? AppColors.gray
+                : widget.isValid!
+                    ? Colors.green
+                    : Colors.red,
+          ),
+          borderRadius: BorderRadius.circular(40),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: widget.isValid == null
+                ? AppColors.gray
+                : widget.isValid!
+                    ? Colors.green
+                    : Colors.red,
+          ),
           borderRadius: BorderRadius.circular(40),
         ),
       ),
