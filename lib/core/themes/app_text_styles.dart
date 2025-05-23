@@ -199,4 +199,34 @@ class AppTextStyles {
     color: AppColors.black100,
     fontFamily: fontFamily,
   );
+  static TextStyle font13RegularGray = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.gray,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font16MediumBlack100 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.black100,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font11RegularGray = TextStyle(
+    fontSize: 11.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.gray,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font13MediumBlack100 = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.black100,
+    fontFamily: fontFamily,
+  );
+  static TextStyle font10RegularGray = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.gray,
+    fontFamily: fontFamily,
+  );
 }
