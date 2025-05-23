@@ -37,6 +37,6 @@ List<DashboardModel> dashboardList = [
     title: 'Privacy',
     image: AppSvgs.privacyIcon,
     type: DashboardType.Action,
-    routeName: '/privacy',
+    routeName: Routes.privacyScreen,
   ),
 ];

@@ -16,6 +16,7 @@ class DefaultButtonWidget extends StatelessWidget {
   final double? borderRadius;
   final double? borderWidth;
   final double? elevation;
+  final Color? textColor;
 
   const DefaultButtonWidget({
     super.key,
@@ -30,6 +31,7 @@ class DefaultButtonWidget extends StatelessWidget {
     this.borderRadius,
     this.borderWidth,
     this.elevation,
+    this.textColor,
   });
 
   @override
@@ -55,7 +57,9 @@ class DefaultButtonWidget extends StatelessWidget {
         child: widget ??
             Text(
               text,
-              style: AppTextStyles.font16Regular,
+              style: AppTextStyles.font16Regular.copyWith(
+                color: textColor ?? AppColors.white,
+              ),
             ),
       ),
     );

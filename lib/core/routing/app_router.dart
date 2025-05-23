@@ -15,6 +15,7 @@ import '../../features/auth/ui/register/password_screen.dart';
 import '../../features/auth/ui/register/register_screen.dart';
 import '../../features/home/ui/layout_screen.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
+import '../../features/privacy/ui/privacy_screen.dart';
 import '../../features/test/ui/test2_screen.dart';
 import '../../features/test/ui/test3_screen.dart';
 import 'routes.dart';
@@ -51,7 +52,7 @@ class AppRouter {
       case Routes.test3:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => getIt<LearnTestCubit>(),
+            create: (context) => getIt<LearnTestCubit>()..addItemsList(),
             child: const Test3Screen(),
           ),
         );
@@ -101,6 +102,8 @@ class AppRouter {
             child: const PasswordScreen(),
           ),
         );
+      case Routes.privacyScreen:
+        return MaterialPageRoute(builder: (_) => const PrivacyScreen());
       case Routes.settingsScreen:
         return MaterialPageRoute(builder: (_) => const SettingsScreen());
       default:
